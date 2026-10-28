@@ -194,26 +194,57 @@ We compare exactly four models for each disease.
 
 ### 1. Logistic Regression
 
-- Fast and interpretable
-- Good baseline model
-- Works well with many tabular datasets
+Logistic Regression is a simple linear classifier. It tries to find a decision boundary that separates the disease class from the non-disease class using a weighted combination of the input features. In plain language, it asks: “Given patient features, how likely is this patient to belong to the disease class?”
+
+Why it matters here:
+
+- very easy to explain
+- strong baseline for tabular health data
+- fast to train and deploy
+- useful when the relationship is roughly linear or partially linear
 
 ### 2. KNN (k=5)
 
-- Uses the 5 nearest samples to decide the class
-- Good for understanding local patterns in the data
+K-Nearest Neighbours looks at the 5 closest patients in the training data and checks what labels those neighbouring patients have. If most of the nearby patients are diseased, the new patient is predicted as diseased; otherwise not diseased.
+
+Why it matters here:
+
+- easy to understand visually
+- works well when similar patients tend to have similar outcomes
+- useful as a benchmark model
+
+However, KNN depends strongly on the distance between samples, so scaling is important. That is why the preprocessing pipeline standardises numeric features before KNN is trained.
 
 ### 3. Random Forest
 
-- Ensemble of decision trees
-- Works well with mixed numeric and categorical data
-- Often robust for healthcare-style tabular data
+Random Forest is an ensemble of many decision trees. A decision tree asks a series of yes/no questions such as “Is blood pressure above this value?” or “Is cholesterol low or high?”. Each tree tries to split the data into more homogenous groups.
+
+A Random Forest builds many such trees on random subsets of the data and random subsets of features, then averages their predictions. This reduces overfitting and makes the model more stable.
+
+In plain language:
+
+- one tree can be noisy or overreact to a few examples
+- many trees together are more stable and robust
+- the forest combines their votes to produce a final prediction
+
+Why it matters here:
+
+- works well with mixed tabular clinical features
+- robust on many medical datasets
+- not too hard to explain at a high level
+- often performs well in disease risk prediction tasks
 
 ### 4. Soft Voting Ensemble
 
-- Combines Logistic Regression + KNN + Random Forest
-- Uses soft voting to average predicted probabilities
-- Often performs well in screening tasks
+The Soft Voting Ensemble combines the prediction probabilities from Logistic Regression, KNN, and Random Forest. Instead of letting one model decide alone, it takes the probability estimates from all three and averages them.
+
+If model A says disease probability is 0.7, model B says 0.6, and model C says 0.8, the ensemble may produce a combined probability around 0.7. This often improves stability because different models make different kinds of mistakes.
+
+Why it matters here:
+
+- combines the strengths of different models
+- often gives stronger screening performance than any single model
+- useful when no one model is clearly best in every situation
 
 ---
 
