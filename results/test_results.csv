@@ -1,0 +1,4 @@
+disease,model,accuracy,precision,recall,f1
+ckd,Random Forest,1.0,1.0,1.0,1.0
+diabetes,Logistic Regression,0.7077922077922078,0.6,0.5,0.5454545454545454
+heart,Soft Voting Ensemble,0.907608695652174,0.912621359223301,0.9215686274509803,0.9170731707317074

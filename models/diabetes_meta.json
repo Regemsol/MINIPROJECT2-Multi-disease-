@@ -1,0 +1,77 @@
+{
+  "disease_label": "Diabetes",
+  "winning_model_name": "Logistic Regression",
+  "expected_input_columns": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "column_types": {
+    "Pregnancies": "numeric",
+    "Glucose": "numeric",
+    "BloodPressure": "numeric",
+    "SkinThickness": "numeric",
+    "Insulin": "numeric",
+    "BMI": "numeric",
+    "DiabetesPedigreeFunction": "numeric",
+    "Age": "numeric"
+  },
+  "numeric_summary": {
+    "Pregnancies": {
+      "min": 0.0,
+      "median": 3.0,
+      "max": 17.0
+    },
+    "Glucose": {
+      "min": 44.0,
+      "median": 117.0,
+      "max": 199.0
+    },
+    "BloodPressure": {
+      "min": 24.0,
+      "median": 72.0,
+      "max": 122.0
+    },
+    "SkinThickness": {
+      "min": 7.0,
+      "median": 29.0,
+      "max": 99.0
+    },
+    "Insulin": {
+      "min": 14.0,
+      "median": 125.0,
+      "max": 846.0
+    },
+    "BMI": {
+      "min": 18.2,
+      "median": 32.3,
+      "max": 67.1
+    },
+    "DiabetesPedigreeFunction": {
+      "min": 0.078,
+      "median": 0.3725,
+      "max": 2.42
+    },
+    "Age": {
+      "min": 21.0,
+      "median": 29.0,
+      "max": 81.0
+    }
+  },
+  "categorical_values": {},
+  "dataset_rows": 768,
+  "dataset_columns": 8,
+  "test_scores": {
+    "accuracy": 0.7077922077922078,
+    "precision": 0.6,
+    "recall": 0.5,
+    "f1": 0.5454545454545454
+  },
+  "recall_check": null,
+  "training_date": "2026-10-28 18:41:37 UTC"
+}

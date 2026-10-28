@@ -1,0 +1,74 @@
+
+=== CKD ===
+rows: 400
+columns: 25
+class counts:
+class
+ckd       248
+notckd    150
+ckd\t       2
+missing values per column:
+age        9
+bp        12
+sg        47
+al        46
+su        49
+rbc      152
+pc        65
+pcc        4
+ba         4
+bgr       44
+bu        19
+sc        17
+sod       87
+pot       88
+hemo      52
+pcv       71
+wbcc     106
+rbcc     131
+htn        2
+dm         2
+cad        2
+appet      1
+pe         1
+ane        1
+class      0
+
+=== DIABETES ===
+rows: 768
+columns: 9
+class counts:
+Outcome
+0    500
+1    268
+missing values per column:
+Pregnancies                   0
+Glucose                       5
+BloodPressure                35
+SkinThickness               227
+Insulin                     374
+BMI                          11
+DiabetesPedigreeFunction      0
+Age                           0
+Outcome                       0
+
+=== HEART ===
+rows: 918
+columns: 12
+class counts:
+HeartDisease
+1    508
+0    410
+missing values per column:
+Age                 0
+Sex                 0
+ChestPainType       0
+RestingBP           1
+Cholesterol       172
+FastingBS           0
+RestingECG          0
+MaxHR               0
+ExerciseAngina      0
+Oldpeak             0
+ST_Slope            0
+HeartDisease        0
